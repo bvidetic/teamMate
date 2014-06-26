@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script src="questions.js"></script>        
+        <script src="main.js"></script>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    
+    <main>
+        <body>
+
+    <!-- LOGGED IN ----------------------------------------------------------------------------------- -->
+            <div class="header">
+                <h1 class="mainHeader">Welcome to Find a Team-mate!</h1>
+                <h2 class="subHeader">Connecting athletes to like-minded athletes!</h2>
+                <form id="login" action="index.php" method="POST" id="">
+                    <input type="text" name="email" class="email" placeholder="enter email to login"><br>
+                    <button id="signinin" class="signinin">Login</button>
+                </form>
+            </div>
+            
+<!--        <div class="header">
+                <form id="logout" action="index.php" method="POST" id="">
+                    <input type="text" name="email" class="email" placeholder="Logged in Email"><br>
+                    <button id="logout" class="logout">Logout</button>
+                </form>    
+            </div> -->
+
+
+       <!-- LEFT ASIDE ------------------------------------------------------------------------------ -->
+            <div class= "mainContents">
+                <div class="leftAside">
+                    <h3>Looking to start a new team?<br>
+                        Short on players?<br>
+                        Lost a teammate?<br>
+                        Find the best fit!
+                    </h3>
+                    <button id="findPlayers">Search for Players</button>
+                </div>
+
+
+        <!-- RIGHT ASIDE -------------------------------------------------------------------------------- -->
+                <div class="rightAside"> 
+                    <h3>Looking to join a team?<br>
+                        New to the area?<br>
+                        Find the best fit!
+                    </h3>
+                    <button id="findPlayers">Search for Teams</button>
+                </div>            
+
+        <!-- MIDDLE FLOAT ------------------------------------------------------------------------------- -->
+                    <div class="centerMiddle">            
+                        <h3><p>TEAM-MATE:<br>noun: a menber of the same team.</p>
+                            <p>At find a Team-mate, we match you with a players that may be a good fit based on your team values. It doesn't matter if you're looking for a high caliber player, someone to fill a specific position or just another member who likes to party. This site will help you find the best match.</p>
+                        </h3>
+                    </div>
+
+ <!-- REGISTER ------------------------------------------------------------------------------------ -->
+                    <div id="hideRegister" style="display:none">
+                        <h2>Register</h2>    
+                        <form id="hideRegister2" action"index.php" method="POST" id="">
+                        <input type="text" name="email" class="email" placeholder="Email"><br>
+                        <input type="text" name="zip" class="zip" placeholder="Zip Code"><br>
+                        <input type="text" name="pass" class="pass" placeholder="Password"><br>
+                        <input type="text" name="pass2" class="pass2" placeholder="Confirm"><br>
+                        <button id="register" class="register">Register</button>
+                            <script>
+                                $(document).ready(function(){
+                                });
+                            </script>
+                        </form>
+                    </div>
+
+    <!-- LOG IN -------------------------------------------------------------------------------------- -->
+<!--             <div class="login">
+                <h2>Login</h2>  
+                <form action="index.php" method="POST">
+                <input type="text" name="email" class="email" placeholder="Email"><br>
+                <input type="text" name="pass" class="pass" placeholder="Password"><br>
+                <button id="test" class="register">Submit</button>
+                <button id="test" class="lostPassword">Forgot Password</button>            
+            </div> -->
+
+    <!-- FORGOT PASSWORD ----------------------------------------------------------------------------- -->
+<!--             <div class="forgotPassword">
+                <h2>Forgot Password</h2>    
+                <form action="index.php" method="POST" id="">
+                <input type="text" name="email" class="email" placeholder="Email"><br>
+                <input type="text" name="zip" class="zip" placeholder="Zip Code"><br>  
+                <button id="test" class="register">Submit</button>
+            </div> -->
+
+        </body>
+    </main>
+</html>

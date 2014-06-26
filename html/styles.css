@@ -1,0 +1,114 @@
+body * {
+    background-color: white;
+    margin: 10px;
+    min-height: 30px;
+    border: 1px solid #777;
+}
+/*HEADER*/
+.header{
+    text-align: center;
+    background-color: red;
+}
+
+#login{
+    float: right;
+    margin-top: -104px;
+}
+
+#signinin{
+    float:right;
+}
+
+#logout{
+    float:right;
+}
+
+/*MAIN CONTENTS*/
+
+.mainContents{
+    /*float:center;*/
+/*    width: 100%;*/
+}
+
+.leftAside{
+    float: left;
+    width: 30%;
+    background-color: red;
+}
+
+.rightAside{
+    float: right;
+    width: 30%;
+    background-color: red;
+}
+
+
+.centerMiddle{
+    margin:0 auto;
+    width: 30%;
+    background-color: red;
+}
+
+h1{
+    font-family: sans-serif;
+    text-align: center;
+}
+
+h2{
+    font-family: Sans-serif;
+    text-align: center;
+}
+
+h3{
+    font-family: Sans-serif;
+    text-align: center;
+}
+
+/*FLOATED HIDDEN FORMS*/
+#hideRegister{
+    margin:0 auto;
+    width: 30%;
+    background-color: red;
+    margin-top: -278px
+}
+
+#hideRegister2{
+    background-color: red
+}
+
+
+.login{
+    margin:0 auto;
+    width: 30%;
+    background-color: red;
+}
+
+
+.forgotPassword{
+    margin:0 auto;
+    width: 30%;
+    background-color: red;
+}
+
+/*THIS STARTS THE USER PROFILE PAGE*/
+.usersSelecter{
+    background-color: red;
+    margin:0 auto;
+    width: 30%;
+}
+
+.mgrSubmit{
+    float: left;
+}
+
+.playerSubmit{
+    float: left;
+}
+
+.teamManager{
+    background-color: red;
+}
+
+.playerProfile{
+    background-color: red;
+}
