@@ -31,7 +31,7 @@ $(document).ready(function(){
             $("#signinin").show();
         }
 
-        if ($this.html() == "Forgot Password"){
+        if ($this.val() == "Forgot Password"){
             hideBoxes();
             $(".forgotPassword").show();
         } else {

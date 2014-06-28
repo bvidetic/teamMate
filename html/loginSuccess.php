@@ -6,15 +6,15 @@
 ?>
 
 
-
+<!-- 
 <html>
     <body>
         <h2>Welcome to login success page.
-<!-- creates the logout button  -->
+creates the logout button 
           <a href="logout.php">Logout</a>
 
 
     </body>
 </html>
-
+ -->
 

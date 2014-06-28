@@ -36,7 +36,7 @@
         setcookie(loggedin, date("F jS - g:i a"), $seconds);
 // CHANGE "loginSuccess.php" to "user.html" page as we want to direct logged in users there        
 // this references the page we will be directed to if login is successful and a alert if it is wrong
-        header("location:loginSuccess.php");
+        header("location:user.php");
     }else{
         echo "Incorrect Email or Password";
     }
