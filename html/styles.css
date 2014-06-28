@@ -1,54 +1,53 @@
+/*css styling FIRST rules:
+display, 
+padding, 
+margin, 
+width, 
+min-width, 
+height, 
+min-height, 
+float, 
+clear, 
+overflow, 
+position, 
+top, left, bottom, right, border, 
+box-sizing, 
+text-align*/
+
+
+
+
 body * {
-    background-color: white;
-    margin: 10px;
-    min-height: 30px;
-    border: 1px solid #777;
+    padding: 0px;
+    margin: 0px;
 }
+
 /*HEADER*/
 .header{
     text-align: center;
+    display: block;
     background-color: red;
-}
-
-#login{
-    float: right;
-    margin-top: -104px;
+    min-height: 35px;
+    margin-bottom: 25px
 }
 
 #signinin{
     float:right;
+    position: relative;
+    margin-top: -28px;
+    height: 25px;
+    width: 75px;
 }
 
-#logout{
+/*#logout{
     float:right;
-}
+    position: relative;
+    margin-top: -30px;
+    height: 25px;
+    width: 75px;
+}*/
 
-/*MAIN CONTENTS*/
-
-.mainContents{
-    /*float:center;*/
-/*    width: 100%;*/
-}
-
-.leftAside{
-    float: left;
-    width: 30%;
-    background-color: red;
-}
-
-.rightAside{
-    float: right;
-    width: 30%;
-    background-color: red;
-}
-
-
-.centerMiddle{
-    margin:0 auto;
-    width: 30%;
-    background-color: red;
-}
-
+/*FONT STYLING FOR H1-h3*/
 h1{
     font-family: sans-serif;
     text-align: center;
@@ -64,51 +63,120 @@ h3{
     text-align: center;
 }
 
-/*FLOATED HIDDEN FORMS*/
-#hideRegister{
+/*MAIN CONTENTS*/
+.leftAside{
+    float: left;
+    width: 30%;
+    display:block;
+    background-color: red;
+    height: 286px;
+    margin-left: 18px;
+
+    position: relative;
+}
+
+.rightAside{
+    float: right;
+    width: 30%;
+    display:block;
+    background-color: red;
+    height: 286px;
+    margin-right: 18px;    
+
+    position: relative;
+}
+
+.centerMiddle{
     margin:0 auto;
     width: 30%;
+    display:block;
     background-color: red;
-    margin-top: -278px
+    margin-top: 25px;
+    position: relative;
 }
 
-#hideRegister2{
-    background-color: red
+#findPlayers1{
+    height:20px; 
+    width:131px; 
+    margin: 170px -65px; 
+    position:relative;
+    top:50%; 
+    left:50%;
 }
 
+#findPlayers2{
+    height:20px; 
+    width:131px; 
+    margin: 192px -65px; 
+    position:relative;
+    top:50%; 
+    left:50%;
+}
+
+/*FLOATED HIDDEN FORMS*/
+.register{
+    display: none;
+    margin:0 auto;
+    width: 30%;
+    background-color: gray;
+    margin-top: 25px
+}
 
 .login{
+    display: none;
     margin:0 auto;
     width: 30%;
-    background-color: red;
+    background-color: gray;
+    margin-top: 25px
 }
 
 
 .forgotPassword{
+    display: none;
     margin:0 auto;
     width: 30%;
-    background-color: red;
+    background-color: gray;
+    margin-top: 25px
 }
 
 /*THIS STARTS THE USER PROFILE PAGE*/
-.usersSelecter{
-    background-color: red;
+/*USER HEADER*/
+.loggedinField{
+    float:right;
+    position: relative;
+    margin-top: -41px;
+    height: 25px;
+    width: 75px;
+    margin-right: 105px
+}
+
+#logoutButton{
+    float: left
+}
+
+/*USER SELECTER*/
+.userSelecter{
+    background-color: gray;
     margin:0 auto;
     width: 30%;
 }
 
-.mgrSubmit{
+.mgrAskButton{
     float: left;
 }
 
-.playerSubmit{
+.playerAnsButtont{
     float: left;
 }
 
 .teamManager{
     background-color: red;
+    display:none;
+    margin-top: 20px;
 }
 
 .playerProfile{
-    background-color: red;
+    background-color: gray;
+    display:none;
+    margin-top: 20px;
 }
