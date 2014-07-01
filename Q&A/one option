@@ -1,0 +1,79 @@
+<?php
+
+    $username = "root";
+    $password = "";
+    $hostname = "localhost";
+
+
+
+    $connect_mysql=mysql_connect($hostname, $username) or die ("connection failed!");
+    $mysql_db=mysql_select_db("findTeammate", $connect_mysql) or die ("could not connect to the database");
+
+    $query = "SELECT * FROM questions";
+    $result=mysql_query($query) or die ("query failed: my sql error"());
+    $i=0;
+    while ($rows=mysql_fetch_array($results))
+    {
+    $roll[$i]=$rows['rollno'];
+    $i++;
+    }
+    $total_elmt=count($roll);
+    ?>
+    <form method = "POST" action="">
+    Select Roll No: <select name="sel">
+    <?php
+    for($j=0; $j<total_elmt; $j++)
+    {
+    ?></option><?php>
+    }
+    ?>
+    </select>
+
+    input name="submit" type=submit" value="search"/><br/>
+    </form>
+    <?php
+
+    if (isset($_POST['submit']))
+    {
+    $value=$_POST['sel'];
+
+    $query2 = "SELECT * FROM questions WHERE rollno='$value'";
+    $result2=mysql_query($query2) or die("query failed : " while ($row=mysql_fetch_array($result2))
+    }
+        echo "Roll NO: ".$row['rollno']."<br/>";
+        echo "Question: ".$question_text['rollno']."<br/>";        
+    }
+    mysql_close($connect_mysql);
+    }
+    ?>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+// this will handle the connection to the database. hostname, password, username references my db registration
+    // $dbhandle = mysql_connect($hostname, $username) or die ("could not connect to db");
+// hooks into the database. findTeammate is the name of the database. dbhandle references variable above.
+    // $selected = mysql_select_db("findTeammate", $dbhandle);
+
+// this doesnt work. its supposed to verify all three fields are filled out. when working it needs to be above the variable below, right here.
+        // if(isset($_POST["email"]) && isset($_POST["zip"]) && isset($_POST["password"])){
+// these are the variables that reference the register input name entered in html below
+            $myemail = $_POST["email"];
+            $myzip = $_POST["zip"];
+            $mypassword = $_POST["password"];
+// tells page to insert data into user table. fields in the table, the values of the variables created above to be inserted in the db.
+            mysql_query("INSERT INTO user(email, zip, password) VALUES ('$myemail', '$myzip', '$mypassword')");
+            // echo("user created successfully");
+        // }
+        mysql_close();
+        header("location:user.php");
+?>
