@@ -1,4 +1,7 @@
 <?php
+
+    error_reporting(E_ALL);
+    ini_set('display_errors', 'on');
 // this information connects us to the database with our db username, password and ip or local direction
     $username = "root";
     $password = "";
@@ -25,6 +28,7 @@
     $result = mysql_query($query);
 // this will make sure we only get 1 result and not more than 1    
     $count = mysql_num_rows($result);
+    $user=mysql_fetch_assoc($result);
 // this closes the connection to mySql after code has run.
     mysql_close();
 // verifies there is 1 record in the db that is equal to info entered
@@ -33,7 +37,8 @@
 // This determines cookie storeage time for current login user. if they leave site, they will have to login again
         $seconds = 120 + time();
 // date always takes this parameter to allow php to access it how we want and tells the db to store it for time specified above.
-        setcookie(loggedin, date("F jS - g:i a"), $seconds);
+        setcookie("loggedin", date("F jS - g:i a"), $seconds);
+        setcookie("user_id", $user["id"]);
 // CHANGE "loginSuccess.php" to "user.html" page as we want to direct logged in users there        
 // this references the page we will be directed to if login is successful and a alert if it is wrong
         header("location:user.php");

@@ -11,21 +11,17 @@
 
     $result = $db->query($query);
     $items = '';
-    while ($question = $result->fetch_assoc()){
-        $items .= "<li><span><input type='radio' name='question_{$question['id']}' value='yes' id='yes'>yes 
-                   <input type='radio' name='question_{$question['id']}' value='no' id='no'>no &nbsp
-                   {$question['question_text']}</li>\n</span>";
-    }
-    $result = $db->query($query);
     $mitems = '';
-    while ($question = $result->fetch_assoc()){
-        $mitems .= "<li><span><input type='radio' name='mquestion_{$question['id']}' value='yes' id='yes'>yes 
-                   <input type='radio' name='mquestion_{$question['id']}' value='no' id='no'>no &nbsp
-                   {$question['mquestion_text']}</li>\n</span>";
+    while ($row = $result->fetch_assoc()){
+
+        $items .= "<li><span><input type='radio' name='question_{$row['id']}' value='1' id='yes'>yes 
+                   <input type='radio' name='question_{$row['id']}' value='0' id='no'>no &nbsp
+                   {$row['question_text']}</li>\n</span>";
+
+        $mitems .= "<li><span><input type='radio' name='question_{$row['id']}' value='1' id='yes'>yes 
+                   <input type='radio' name='question_{$row['id']}' value='0' id='no'>no &nbsp
+                   {$row['mquestion_text']}</li>\n</span>";
     }
-
-
-
 
 ?>
 
@@ -89,13 +85,14 @@
 <!-- TEAM MANAGER SECTION: FLOAT DETERMINED BY USER SELECTION ----------------------- -->
             <div class="teamManager">
                 <h2>What are you looking for in a team-mate?</h2>
-                <form action="manageranswer.php" method="POST">
-
+                <form action="process_answers.php" method="POST">
+                    <input type="hidden" value="manager" name="type">
+                    <input type="hidden" value="" name="user_id">
                     <div class="registerQuestions">Please answer these questions so we can help you find a player...</div>
                     <ul class="registerQuestions">
-                        <li>
+                       
                             <?php echo $mitems; ?>
-                        </li>
+                        
                     <input type="submit" class="mgrAskButton" name="submit" value="mgrAskButton"/>
                     </ul>
                 </form>
@@ -153,7 +150,8 @@
 <!-- PLAYER USER ----------------------------------------------------------------- -->
             <div class="playerProfile">
                 <h2>Find a team that best suites you best!</h2>
-                <form action="playeranswer.php" method="POST">
+                <form action="process_answers.php" method="POST">
+                    <input type="hidden" value="player" name="type">
                     <div class="opening">Please answer these questions so we can help you find a team...</div>
                     <ul class="RegisterQuestions">
                         <li>

@@ -14,11 +14,6 @@
                 <h1 class="mainHeader">Welcome to Find a Team-mate!</h1>
                 <h2 class="subHeader">Connecting athletes to like-minded athletes!</h2>
                 <button id="signinin" class="signinin">Sign In</button>
-                    <script>
-                        $(document).ready(function(){
-                        });
-                    </script>
-
             </div>
             
 <!--        <div class="header">
