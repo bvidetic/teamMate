@@ -27,6 +27,7 @@
        <!-- LEFT ASIDE --------------------------------------------------------- -->
             <div class= "mainContents">
                 <div class="leftAside">
+                    <br>
                     <h3>Looking to start a new team?<br>
                         Short on players?<br>
                         Lost a teammate?<br>
@@ -37,7 +38,8 @@
 
 
         <!-- RIGHT ASIDE -------------------------------------------------------- -->
-                <div class="rightAside"> 
+                <div class="rightAside">
+                    <br>
                     <h3>Looking to join a team?<br>
                         New to the area?<br>
                         Find the best fit!
